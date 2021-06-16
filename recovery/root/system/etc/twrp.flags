@@ -35,7 +35,7 @@
 /xbl            emmc    /dev/block/bootdevice/by-name/xbl                         flags=backup=1;subpartitionof=/abl
 /xbl_config     emmc    /dev/block/bootdevice/by-name/xbl_config                  flags=backup=1;subpartitionof=/abl
 
-#/storage        ext4    /data/media/0                                             flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
+/storage        ext4    /data/media/0                                             flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 /persist        ext4    /dev/block/sda2                                           flags=display="Persist"
 /persist_image  emmc    /dev/block/sda2                                           flags=display="Persist";flashimg;backup=1
 /vbmeta         emmc    /dev/block/sde18                                          flags=display="Vbmeta";flashimg;backup=1
@@ -49,6 +49,6 @@
 /efsg           emmc    /dev/block/sdf10                                          flags=backup=1;subpartitionof=/efs1
 
 # Removable storage
-/usb_otg        vfat    /dev/block/sdg1                    /dev/block/sdg         flags=display="USB-OTG";storage;wipeingui;removable;fsflags="utf8"
-/external_sd    vfat    /dev/block/mmcblk0p1               /dev/block/mmcb0k1     flags=display="MicroSD";storage;wipeingui;removable;fsflags="nosuid,nodev,utf8"
+/usb_otg        vfat    /dev/block/sdg1                    /dev/block/sdg         flags=display="USB-Storage";storage;wipeingui;removable;fsflags="utf8"
+/sdcard1        vfat    /dev/block/mmcblk0p1               /dev/block/mmcb0k1     flags=display="MicroSD";storage;wipeingui;removable;fsflags="nosuid,nodev,utf8"
 #
